@@ -3,7 +3,7 @@ Simple script to alert a Discord webhook when appointments are available at a CB
 
 ## Installation
 1. Install [Python3](https://www.python.org/downloads/) and (optional) Git.
-2. Install requests using ```pip3 install requests```
+2. Install dependencies using ```pip3 install -r requirements.txt```
 3. Clone this repository (```git clone https://github.com/kileythefox/ttp-notifier```) or otherwise download to your machine.
 4. Determine the ID number of your desired Enrollment Center.  
 5. Populate the variable WEBHOOK_URL with a Discord Webhook URL and the variable LOCATION_IDS with a List containing the ID numbers of your desired Enrollment Centers.
