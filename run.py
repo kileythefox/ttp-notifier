@@ -26,7 +26,7 @@ while True:
                     apptDate = slot["startTimestamp"]
                     readableDate = datetime.strptime(apptDate, "%Y-%m-%dT%H:%M").strftime("%A %Y-%m-%d %H:%M")
                     if(apptDate not in announcedDates):
-                        sendDiscordAlert("APPOINTMENT IS AVAILABLE AT YEG\n"+readableDate)
+                        sendDiscordAlert("APPOINTMENT IS AVAILABLE AT "+LOCATION_IDS[x]+"\n"+readableDate)
                         print(readableDate)
                         announcedDates.append(apptDate)
             else:
