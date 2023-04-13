@@ -1,5 +1,6 @@
 WEBHOOK_URL = "" #URL of Discord webhook
 LOCATION_IDS = ["5032"] #ID number(s) of enrollment center to query
+LOCATION_NICKNAMES = ["YEG"] #Nicknames that correspond to location IDs above
 
 import requests
 import smtplib, ssl
@@ -26,7 +27,7 @@ while True:
                     apptDate = slot["startTimestamp"]
                     readableDate = datetime.strptime(apptDate, "%Y-%m-%dT%H:%M").strftime("%A %Y-%m-%d %H:%M")
                     if(apptDate not in announcedDates):
-                        sendDiscordAlert("APPOINTMENT IS AVAILABLE AT "+LOCATION_IDS[x]+"\n"+readableDate)
+                        sendDiscordAlert("APPOINTMENT IS AVAILABLE AT "+LOCATION_NICKNAMES[x]+"\n"+readableDate)
                         print(readableDate)
                         announcedDates.append(apptDate)
             else:
