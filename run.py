@@ -3,7 +3,6 @@ LOCATION_IDS = ["5032"] #ID number(s) of enrollment center to query
 LOCATION_NICKNAMES = ["YEG"] #Nicknames that correspond to location IDs above
 
 import requests
-import smtplib, ssl
 import time
 from datetime import datetime
 
