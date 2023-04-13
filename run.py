@@ -37,7 +37,7 @@ while True:
                     if(apptDate not in announcedDates[x]):
                         print("Appointment found on "+readableDate+" at "+LOCATION_NICKNAMES[x])
                         sendDiscordAlert("APPOINTMENT IS AVAILABLE AT "+LOCATION_NICKNAMES[x]+"\n"+readableDate)
-                        announcedDates.append(apptDate)
+                        announcedDates[x].append(apptDate)
             else:
                 #Reset announced dates
                 announcedDates[x] = []
